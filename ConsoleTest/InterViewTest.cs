@@ -6,6 +6,7 @@ namespace ConsoleTest
 {
     public class InterViewTest
     {
+        // sum array of number
         public int Sum(int[] ints) 
         {
             int sum = 0;
@@ -15,7 +16,8 @@ namespace ConsoleTest
             }
             return sum;
         }
-        public int MultNum(int a, int b) 
+        //mult two numbers 
+        public int Multiply(int a, int b) 
         {
             int k = 1;
             int sum = 0;
@@ -25,6 +27,18 @@ namespace ConsoleTest
                 k++;
             }
             return sum;
+        }
+        public int DiffIndex(int[] arr)
+        {
+            int diff = 0;
+            for (int i=0; i<arr.Length-1; i++) 
+            {
+                if (arr[i+1] - arr[i] > diff)
+                {
+                    diff = arr[i + 1] - arr[i];
+                }
+            }
+            return diff;
         }
     }
 }
