@@ -46,5 +46,13 @@ namespace TestProject
             int[] n = num.TwoDiffArray(a,b);
             Assert.Equal(expected, n);
         }
+        [Theory]
+        [InlineData(new int[] { 2, 1, 5, 4 }, new int[] { 1, 2, 4, 5 })]
+        public void SortArray(int[] a, int[] expected)
+        {
+            InterViewTest num = new InterViewTest();
+            int[] n = num.SortArray(a);
+            Assert.Equal(expected, n);
+        }
     }
 }
