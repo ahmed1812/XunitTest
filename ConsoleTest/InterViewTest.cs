@@ -70,5 +70,21 @@ namespace ConsoleTest
             }
             return a;
         }
+
+        public int FibSwap(int n)
+        {
+            int a = 0;
+            int b = 1;
+            int sum = 0;
+            int i = 1;
+            while (i < n)
+            {
+                sum = a + b;
+                a = b;
+                b = sum;
+                i++;
+            }
+            return sum;
+        }
     }
 }

@@ -54,5 +54,13 @@ namespace TestProject
             int[] n = num.SortArray(a);
             Assert.Equal(expected, n);
         }
+        [Theory]
+        [InlineData(9, 34)]
+        public void FibSwap(int a, int expected)
+        {
+            InterViewTest num = new InterViewTest();
+            int n = num.FibSwap(a);
+            Assert.Equal(expected, n);
+        }
     }
 }
