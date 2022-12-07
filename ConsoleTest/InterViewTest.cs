@@ -40,5 +40,18 @@ namespace ConsoleTest
             }
             return diff;
         }
+
+        public int[] TwoDiffArray(int[] a, int[] b)
+        {
+            List<int> list = new List<int>();
+            for (int i=0; i< a.Length; i++)
+            {
+                if (a[i] == b[i])
+                {
+                    list.Add(a[i]);
+                }
+            }
+            return list.ToArray();
+        }
     }
 }

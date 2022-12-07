@@ -38,5 +38,13 @@ namespace TestProject
             int n = num.DiffIndex(numbers);
             Assert.Equal(expected, n);
         }
+        [Theory]
+        [InlineData(new int[] { 2, 1, 5, 4 }, new int[] { 1, 2, 5, 4 }, new int[] {5, 4 })]
+        public void TwoDiffArray(int[] a, int[] b, int[] expected)
+        {
+            InterViewTest num = new InterViewTest();
+            int[] n = num.TwoDiffArray(a,b);
+            Assert.Equal(expected, n);
+        }
     }
 }
