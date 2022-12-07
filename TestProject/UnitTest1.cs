@@ -62,5 +62,14 @@ namespace TestProject
             int n = num.FibSwap(a);
             Assert.Equal(expected, n);
         }
+        [Theory]
+        [InlineData(31, true)]
+        [InlineData(4, false)]
+        public void NumIsPrime(int a, bool expected)
+        {
+            InterViewTest num = new InterViewTest();
+            bool n = num.NumIsPrime(a);
+            Assert.Equal(expected, n);
+        }
     }
 }
