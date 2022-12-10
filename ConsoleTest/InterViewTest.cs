@@ -101,9 +101,25 @@ namespace ConsoleTest
             return flag;
         }
 
-        public bool IsPalindrome(string a)
+        public bool IsPalindrome(string s)
         {
-            throw new NotImplementedException();
+            int i = 0;
+            int j = s.Length - 1;
+            while (true)
+            {
+                if (i > j)
+                {
+                    return true;
+                }
+                char a = s[i];
+                char b = s[j];
+                if (char.ToLower(a) != char.ToLower(b))
+                {
+                    return false;
+                }
+                i++;
+                j--;
+            }
         }
     }
 }
