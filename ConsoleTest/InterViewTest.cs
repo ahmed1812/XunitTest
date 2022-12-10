@@ -100,5 +100,10 @@ namespace ConsoleTest
             }
             return flag;
         }
+
+        public bool IsPalindrome(string a)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
