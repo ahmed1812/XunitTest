@@ -147,9 +147,15 @@ namespace ConsoleTest
             return num;
         }
 
-        public int CountOcc(string s, string d )
+        public int CountOcc(string s, char d )
         {
-            throw new NotImplementedException();
+            int count = 0;  
+            foreach (var item in s)
+            {
+                if (item == d)
+                    count++;
+            }
+            return count;
         }
     }
 }

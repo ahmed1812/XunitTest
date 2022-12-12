@@ -89,8 +89,8 @@ namespace TestProject
             Assert.Equal(expected, n);
         }
         [Theory]
-        [InlineData("a", "aaahmedd", 3)]
-        public void CountOcc(string s,string b, int expected)
+        [InlineData("aaahmedd", 'a', 3)]
+        public void CountOcc(string s,char b, int expected)
         {
             InterViewTest num = new InterViewTest();
             int n = num.CountOcc(s,b);
