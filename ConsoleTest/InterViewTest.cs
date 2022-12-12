@@ -7,23 +7,23 @@ namespace ConsoleTest
     public class InterViewTest
     {
         // sum array of number
-        public int Sum(int[] ints) 
+        public int Sum(int[] ints)
         {
             int sum = 0;
-            foreach (int i in ints) 
+            foreach (int i in ints)
             {
-                sum+= i;
+                sum += i;
             }
             return sum;
         }
         //mult two numbers 
-        public int Multiply(int a, int b) 
+        public int Multiply(int a, int b)
         {
             int k = 1;
             int sum = 0;
             while (k <= b)
             {
-                sum+= a;
+                sum += a;
                 k++;
             }
             return sum;
@@ -31,9 +31,9 @@ namespace ConsoleTest
         public int DiffIndex(int[] arr)
         {
             int diff = 0;
-            for (int i=0; i<arr.Length-1; i++) 
+            for (int i = 0; i < arr.Length - 1; i++)
             {
-                if (arr[i+1] - arr[i] > diff)
+                if (arr[i + 1] - arr[i] > diff)
                 {
                     diff = arr[i + 1] - arr[i];
                 }
@@ -44,7 +44,7 @@ namespace ConsoleTest
         public int[] TwoDiffArray(int[] a, int[] b)
         {
             List<int> list = new List<int>();
-            for (int i=0; i< a.Length; i++)
+            for (int i = 0; i < a.Length; i++)
             {
                 if (a[i] == b[i])
                 {
@@ -56,9 +56,9 @@ namespace ConsoleTest
 
         public int[] SortArray(int[] a)
         {
-            for (int i=0; i<a.Length; i++)
+            for (int i = 0; i < a.Length; i++)
             {
-                for (int j= i+1; j<a.Length; j++)
+                for (int j = i + 1; j < a.Length; j++)
                 {
                     if (a[i] > a[j])
                     {
@@ -90,7 +90,7 @@ namespace ConsoleTest
         public bool NumIsPrime(int a)
         {
             bool flag = false;
-            for (int i=2; i<=a/2; i++)
+            for (int i = 2; i <= a / 2; i++)
             {
                 if (a % i == 1)
                 {
@@ -124,7 +124,27 @@ namespace ConsoleTest
 
         public int UnqNum(int[] numbers)
         {
-            throw new NotImplementedException();
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+            int num = 0;
+            foreach (var item in numbers)
+            {
+                if (!dict.ContainsKey(item))
+                {
+                    dict.Add(item, 1);
+                }
+                else
+                {
+                    dict[item]++;
+                }
+            }
+            foreach (var k in dict)
+            {
+                if (k.Value == 1)
+                {
+                    num = k.Key;
+                }
+            }
+            return num;
         }
     }
 }
