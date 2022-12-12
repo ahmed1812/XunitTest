@@ -146,5 +146,10 @@ namespace ConsoleTest
             }
             return num;
         }
+
+        public int CountOcc(string s, string d )
+        {
+            throw new NotImplementedException();
+        }
     }
 }

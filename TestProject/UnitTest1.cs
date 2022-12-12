@@ -88,5 +88,13 @@ namespace TestProject
             int n = num.UnqNum(numbers);
             Assert.Equal(expected, n);
         }
+        [Theory]
+        [InlineData("a", "aaahmedd", 3)]
+        public void CountOcc(string s,string b, int expected)
+        {
+            InterViewTest num = new InterViewTest();
+            int n = num.CountOcc(s,b);
+            Assert.Equal(expected, n);
+        }
     }
 }
