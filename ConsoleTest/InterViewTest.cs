@@ -121,5 +121,10 @@ namespace ConsoleTest
                 j--;
             }
         }
+
+        public int UnqNum(int[] numbers)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

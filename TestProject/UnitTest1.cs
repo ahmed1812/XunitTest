@@ -80,5 +80,13 @@ namespace TestProject
             bool n = num.IsPalindrome(a);
             Assert.Equal(expected, n);
         }
+        [Theory]
+        [InlineData(new int[] { 5, 5, 6, 6, 7, 8, 8, 9, 9, 9 }, 7)]
+        public void UnqNum(int[] numbers, int expected)
+        {
+            InterViewTest num = new InterViewTest();
+            int n = num.UnqNum(numbers);
+            Assert.Equal(expected, n);
+        }
     }
 }
