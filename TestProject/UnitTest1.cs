@@ -96,5 +96,13 @@ namespace TestProject
             int n = num.CountOcc(s,b);
             Assert.Equal(expected, n);
         }
+        [Theory]
+        [InlineData(543, 345)]
+        public void ReverNum(int i, int expected)
+        {
+            InterViewTest num = new InterViewTest();
+            int n = num.ReverNum(i);
+            Assert.Equal(expected, n);
+        }
     }
 }

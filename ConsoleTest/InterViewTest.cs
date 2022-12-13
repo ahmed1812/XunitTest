@@ -157,5 +157,10 @@ namespace ConsoleTest
             }
             return count;
         }
+
+        public int ReverNum(int i)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
