@@ -160,7 +160,14 @@ namespace ConsoleTest
 
         public int ReverNum(int i)
         {
-            throw new NotImplementedException();
+            int rev = 0;
+            while (i != 0)
+            {
+                int d = i % 10;
+                rev = d + rev * 10;
+                i /= 10;
+            }
+            return rev;
         }
     }
 }
